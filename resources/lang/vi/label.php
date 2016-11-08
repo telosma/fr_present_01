@@ -10,6 +10,7 @@ return [
     'password' => 'Mật khẩu',
     'remember_me' => 'Ghi nhớ đăng nhập',
     'forgot_password' => 'Quên mật khẩu',
+    'dashboard' => 'Trang chủ',
     'lang' => [
         'en' => 'English',
         'vi' => 'Tiếng Việt',

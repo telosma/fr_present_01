@@ -12,11 +12,11 @@
 */
 
 
-Route::group(['middleware' => 'localization', 'prefix' => Session::get('locale')], function() {
+Route::group(['middleware' => 'localization'], function() {
 
     Auth::routes();
 
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home', 'HomeController@index')->name('home');
 
     Route::post('/lang', [
         'as' => 'switchLang',
@@ -25,5 +25,12 @@ Route::group(['middleware' => 'localization', 'prefix' => Session::get('locale')
 
     Route::get('/', function () {
         return view('welcome');
+    })->name('welcome');
+    Route::get('signin', function() {
+        return view('auth.login');
     });
+    Route::post('signin', [
+        'as' => 'signin',
+        'uses' => 'AuthUserController@postSignin',
+    ]);
 });

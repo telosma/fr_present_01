@@ -82,7 +82,7 @@
                         </select>
                         {{ csrf_field() }}
                     </form>
-                    <a href="{{ url('/login') }}">{{ Lang::get('label.login') }}</a>
+                    <a href="{{ url('/signin') }}">{{ Lang::get('label.login') }}</a>
                     <a href="{{ url('/register') }}">{{ Lang::get('label.register') }}</a>
                 </div>
             @endif

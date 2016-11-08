@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('label.login') }}</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('signin') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -53,10 +53,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ trans('label.login') }}
                                 </button>
-
+{{--
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     {{ trans('label.forgot_password') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>

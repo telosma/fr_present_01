@@ -10,6 +10,7 @@ return [
     'password' => 'Password',
     'remember_me' => 'Remember Me',
     'forgot_password' => 'Forgot Your Password?',
+    'dashboard' => 'Dashboard',
     'lang' => [
         'en' => 'English',
         'vi' => 'Tiếng Việt',
